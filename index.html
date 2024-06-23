@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MutnyStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Логотип">
+        </div>
+        <div id="title">
+            <h1>MutnyStore</h1>
+        </div>
+        <div class="header-controls">
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <div id="header-controls-text">
+                    Dark Theme
+                </div>
+            </div>
+            <button id="cartButton" class="cart-button">Basket (<span id="cartCount">0</span>)</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Main</a></li>
+            <li><a href="#catalog">Catalog</a></li>
+            <li><a href="#warranty">Warranty</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="home-section">
+            <div class="banner-slider">
+                <div class="banner">
+                    <img src="assets/Banner1.png" alt="Banner 1">
+                </div>
+                <div class="banner">
+                    <img src="assets/Banner2.png" alt="Banner 2">
+                </div>
+                <div class="banner">
+                    <img src="assets/Banner3.png" alt="Banner 3">
+                </div>
+            </div>
+
+            <div class="features">
+                <h2>Why you should choose us?</h2>
+                <div class="features-container">
+                    <div class="feature">
+                        <img src="assets/fast-delivery.png" alt="Быстрая доставка">
+                        <h3>Fast delivery</h3>
+                        <p>We deliver goods in the shortest possible time throughout Russia</p>
+                    </div>
+                    <div class="feature">
+                        <img src="assets/quality-assurance.png" alt="Гарантия качества">
+                        <h3>Quality assurance</h3>
+                        <p>We provide a warranty on all products for up to 3 years</p>
+                    </div>
+                    <div class="feature">
+                        <img src="assets/wide-assortment.png" alt="Широкий ассортимент">
+                        <h3>Wide assortment</h3>
+                        <p>You will find more than 10,000 items on our site</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews">
+                <h2>Feedback from our customers</h2>
+                <div class="reviews-container">
+                    <div class="review">
+                        <h4>Ivan Petrov</h4>
+                        <div class="rating">★★★★★</div>
+                        <p>Great store! Fast shipping and quality products. I will recommend to my friends.</p>
+                    </div>
+                    <div class="review">
+                        <h4>Anna Sidorova</h4>
+                        <div class="rating">★★★★☆</div>
+                        <p>Good selection of products. Delivery was a little delayed but overall great.</p>
+                    </div>
+                    <div class="review">
+                        <h4>Alexei Ivanov</h4>
+                        <div class="rating">★★★★★</div>
+                        <p>I bought a laptop, very satisfied. The consultant helped with the choice, thank you!</p>
+                    </div>
+                    <div class="review">
+                        <h4>Elena Smirnova</h4>
+                        <div class="rating">★★★★☆</div>
+                        <p>Ordered a GPU, came well packaged. The prices are reasonable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalog" class="catalog-section" style="display: none;">
+            <aside class="filters">
+                <h2>Filters</h2>
+                <ul>
+                    <li><button onclick="showCategory('all')">All products</button></li>
+                    <li><button onclick="showCategory('gpu')">GPU</button></li>
+                    <li><button onclick="showCategory('desktop')">Desktop PC</button></li>
+                    <li><button onclick="showCategory('laptop')">Laptops</button></li>
+                    <li><button onclick="showCategory('motherboard')">Motherboards</button></li>
+                </ul>
+                <div class="price-filter">
+                    <h3>Price</h3>
+                    <input type="range" id="priceSlider" min="0" max="500000" step="10000" value="500000">
+                    <p>Up to <span id="priceValue"></span> RUB</p>
+                </div>
+            </aside>
+
+            <section class="products-grid" id="products">
+                <!-- Товары будут добавлены с помощью JavaScript -->
+            </section>
+        </section>
+
+        <section id="warranty" class="warranty-section" style="display: none;">
+            <h2>Warranty Information</h2>
+            <div class="warranty-text">
+                <br>&emsp;&emsp;With your purchase and registration of GIGABYTE / AORUS products (limited to products listed on our official websites: https://www.aorus.com / 
+                    https://www.gigabyte.com/; regional differences may apply), GIGA-BYTE Technology Co., Ltd. (“GIGABYTE”) warrants the GIGABYTE / 
+                    AORUS products (the “Product”) to be free from defects in workmanship and materials for the applicable warranty period from the date of purchase 
+                    (see product-specific warranty period information in the chart below), subject to the Terms and Conditions herein.
+                <br>&emsp;&emsp;If the Product fails during normal and proper use within the warranty period, GIGABYTE will, at its discretion, repair or replace the Product. 
+                    The defective parts within the Product, or the Product itself, will be replaced with functional equivalents using new or refurbished parts or units. 
+                    Repair or replacement is subject to the original configuration.
+                <br>&emsp;&emsp;If a Product is near the end of a given warranty period and a repair/replacement is not possible GIGABYTE reserves the right to offer an 
+                    alternative of equal or greater value or a partial refund proportional to the remaining warranty life of the Product. Parts that have 
+                    been replaced during service are property of GIGABYTE/AORUS.
+                <br>&emsp;&emsp;Please note that the warranty term and warranty periods will vary by specific Product and may differ from one region to another; 
+                    please inquire with the shops where originally purchased or our local offices. If you would like to verify the warranty term for 
+                    the Product bought, please kindly contact our local offices. Our service contact information can be found on the web at https://www.mutnystore.com/Warranty
+                <h3>Motherboards</h3>
+                <h4>3 years of limited local warranty.</h4>
+                Regional differences may apply. Please contact the location where the original order was placed.
+                The Warranty Period may differ regionally. While specific models are eligible for extended warranty upon online registration, 
+                no more than 2 motherboards of the same model can be registered for extended warranty under the same 
+                account within 1 year from the date of purchase.
+                <h3>Graphic Cards</h3>
+                <h4>3 years of limited local warranty.</h4>
+                Regional differences may apply. Please contact the location where the original order was placed.
+                The Warranty Period may differ regionally. The 3-year limited local warranty does not apply to the Mining Series graphics cards. 
+                While specific models are eligible for extended warranty upon online registration, no more than 2 cards of the same model can be registered 
+                for extended warranty under the same account within 1 year from the date of purchase. GIGABYTE graphics cards, except those labeled “Mining Series”, 
+                are intended only for use with desktop PCs. Other types of use, such as blockchain computing or cryptocurrency mining, will render the product warranty void.
+                <h3>Desktop PC</h3>
+                <h4>3 years.</h4>
+                This warranty does not cover and may be voided for failure caused by improper installation, operation, cleaning or maintenance, accident, damage, misuse, abuse, 
+                non-GIGABYTE/AORUS modifications to the product, any third-party software programs, normal wear and tear or any other event, act, 
+                default or omission outside GIGABYTE/AORUS’ control. For further details, please see the Exclusion of Warranty section on the Desktop PC warranty page.
+            </div>
+        </section>
+
+        <section id="feedback" class="feedback-section" style="display: none;">
+            <div class="feedback-section-title">
+                <h2>Feedback</h2>
+            </div>
+            <div class="feedback-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            
+                <button type="submit">Send</button>
+            </div>
+        </section>
+
+
+    </main>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Basket</h2>
+            <div id="cartItems"></div>
+            <p>Total: <span id="cartTotal">0</span> RUB</p>
+            <button id="checkoutButton">Checkout</button>
+        </div>
+    </div>
+
+    <div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeProductModal">&times;</span>
+        <h2 id="productModalTitle">Product Title</h2>
+        <img id="productModalImage" src="" alt="Product Image" />
+        <p id="productModalDescription">Product Description</p>
+        <p id="productModalPrice">Price: <span id="productModalPriceValue"></span> RUB</p>
+    </div>
+    
+</div>
+
+<div id="developerModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>About me</h2>
+        <p>Hey there!</p>
+        <p>My name is Kirillov Maxim and i am a creator of this web app. I work as DevOps engineer at STM Labs, love playing guitar in free time. Feel free to contact me at:</p>
+        <p> Telegram: @oliverolssonxyz
+        <p> X: @s0ulflight
+    </div>
+</div>
+
+    <footer>
+        <div class="contact-info">
+            <h3>Contact info</h3>
+            <p>Address: Mutnaya st, 13/37, Moscow</p>
+            <p>Number: +7 (123) 456-78-90</p>
+            <p>Email: info@mutnystore.com</p>
+        </div>
+        <button id="developerInfo" class="developer-btn">About me</button>
+    </footer>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
