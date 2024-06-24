@@ -152,7 +152,7 @@ function updateCartModal() {
     cart.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.innerHTML = `
-            <p>${item.name} - ${item.price} руб. x ${item.quantity}</p>
+            <p>${item.name} - ${item.price} RUB x ${item.quantity}</p>
             <button onclick="removeFromCart(${item.id})">Remove</button>
         `;
         cartItems.appendChild(itemElement);

@@ -1,7 +1,11 @@
+/*Инициализация шрифта */
+
 @font-face {
     font-family: gothamMedium;
-    src: url(fonts/gotham_medium.otf);
+    src: url(assets/fonts/gotham_medium.otf);
 }  
+
+/*Медиа запросы */
 
 @media (max-width: 1200px) {
     .review {
@@ -102,6 +106,8 @@
     }
 }
 
+/*Иниицализация цветов */
+
 :root {
     font-family: gothamMedium;
     --primary-color: #fff;
@@ -110,6 +116,8 @@
     --button-hover: #bfbfbf;
 }
 
+/*Темная тема */
+
 .dark-theme {
     font-family: gothamMedium;
     --primary-color: black;
@@ -117,6 +125,8 @@
     --text-color: #fff;
     --button-hover: #0e0e0e;
 }
+
+/*Стили тела документа */
 
 body {
     font-family: gothamMedium;
@@ -129,6 +139,8 @@ body {
     color: var(--text-color);
     transition: all 0.3s ease;
 }
+
+/*Заголовок */
 
 header {
     background-color: var(--primary-color);
@@ -147,6 +159,8 @@ header {
     padding-left: 130px;
 }
 
+/*Слайдер темы */
+
 .header-controls {
     display: flex;
     align-items: center;
@@ -156,6 +170,8 @@ header {
 #header-controls-text {
     padding-left: 10px;
 }
+
+/*Навигационная панель */
 
 nav ul {
     list-style-type: none;
@@ -178,9 +194,13 @@ main {
     flex-grow: 1;
 }
 
+/*Страница 'home' */
+
 .home-section {
     padding: 20px;
 }
+
+/* Слайдер */
 
 .banner-slider {
     position: relative;
@@ -209,6 +229,8 @@ main {
     height: 100%;
     object-fit: cover;
 }
+
+/* Положительные качества */
 
 .features {
     padding: 40px 0;
@@ -253,6 +275,8 @@ main {
     color: #666;
 }
 
+/* Отзывы */
+
 .reviews {
     padding: 40px 0;
     background-color: var(--primary-color)
@@ -293,9 +317,13 @@ main {
     color: var(--text-color);
 }
 
+/* Раздел каталога */
+
 .catalog-section {
     display: block;
 }
+
+/* Раздел гарантии */
 
 .warranty-section {
     display: flex;
@@ -332,7 +360,7 @@ main {
     width: 300px;
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Пространство между элементами */
+    gap: 10px;
     background-color: var(--background-color);
 }
 
@@ -362,10 +390,9 @@ main {
     color: var(--text-color);
     font-family: gothamMedium;
     background-color: var(--primary-color);
-    height: 100px; /* Высота текстового поля */
+    height: 100px;
     width: 300px;
     border: none;
-    resize: vertical; /* Разрешить вертикальное изменение размера */
     border-color: var(--background-color);
     border-radius: 10px;
     resize: none;
@@ -391,6 +418,8 @@ main {
 .feedback-form button:hover {
     background-color: var(--button-hover);
 }
+
+/* Фильтры */
 
 .filters {
     width: 200px;
@@ -431,10 +460,14 @@ main {
     width: 100%;
 }
 
+/* Слайдер цены */
+
 input[type="range"]::-webkit-slider-runnable-track {
     background: var(--background-color);
     border-radius: 10px;
 }
+
+/* Сетка товаров */
 
 .products-grid {
     flex-grow: 1;
@@ -444,8 +477,6 @@ input[type="range"]::-webkit-slider-runnable-track {
     gap: 1em;
     padding: 1em;
 }
-
-
 
 .product {
     padding: 1em;
@@ -480,12 +511,28 @@ input[type="range"]::-webkit-slider-runnable-track {
     background-color: var(--button-hover);
 }
 
+/* Футер */
+
 footer {
     background-color: var(--background-color);
     color: var(--text-color);
     padding: 1em;
     text-align: center;
 }
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    flex: 1;
+}
+/* Перекоючатель темы */
 
 .theme-switch-wrapper {
     display: flex;
@@ -542,6 +589,8 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
+/* Корзина */
+
 .cart-button {
     background-color: var(--background-color);
     font-family: gothamMedium;
@@ -559,6 +608,8 @@ input:checked + .slider:before {
     color: var(--text-color);
     transition: .3s ease;
 }
+
+/* Модальное окно корзины */
 
 .modal {
     display: none;
@@ -604,6 +655,8 @@ input:checked + .slider:before {
     background-color: var(--button-hover);
 }
 
+/* Модальное окно карточки товара*/
+
 #productModal {
     display: none;
     position: fixed;
@@ -647,24 +700,7 @@ input:checked + .slider:before {
     cursor: pointer;
 }
 
-footer {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    padding: 1em;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.contact-info {
-    flex: 1;
-}
+/* Модальное окно информации о разработчике*/
 
 #developerModal {
     display: none;
